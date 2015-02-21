@@ -1,10 +1,15 @@
+##Assignment 2 R: peer review: Caching the Inverse of a Matrix
+
+# These functions, given a square matrix (equal dimensions), save the matrix information, and then calculate and return the inverse of the matrix. 
+#The original matrix and it's inverse are both cached outside of the functions' environment, to ensure that the values of the two matricies are preserved beyond the current instance of the function. 
+     
 
 
-#Assignment 2 R: peer review: Caching the Inverse of a Matrix
-## These functions, given a square matrix (equal dimensions), save the matrix information, and then calculate and return the inverse of the matrix. The original matrix and it's inverse are both cached outside of the functions' environment, to ensure that the values of the two matricies are preserved beyond the current instance of the function. 
      
-     
-#About the makeCacheMatrix function:  This function creates a special matrix object (matrix) to store the inverse matrix it calculates  It also creates an object (x) to store the original matrix that is inputted into the function.  Both of these objecs are cached outside of the function's environment with the "set" function.  The "get" function returns the value of the matrix, when called by the next function, cacheSolve.  The "setmatrix" and "getmatrix" functions cache and retreive the cached value of inverse matrix, respectivly.
+#About the makeCacheMatrix function:  This function creates a special matrix object (matrix) to store the inverse matrix it calculates  It also creates an object (x) to store the original matrix that is inputted into the function.  
+#Both of these objecs are cached outside of the function's environment with the "set" function.  
+#The "get" function returns the value of the matrix, when called by the next function, cacheSolve.  
+#The "setmatrix" and "getmatrix" functions cache and retreive the cached value of inverse matrix, respectivly.
 
      
 makeCacheMatrix <- function(x = matrix()) {  #pass in matrix instead of x vector
@@ -28,7 +33,9 @@ makeCacheMatrix <- function(x = matrix()) {  #pass in matrix instead of x vector
 
 
 
-#The cacheSolve function calculates the inverse of the matrix object (x) created with the previous function. The cacheSolve function first checks whether the inverse matrix has already been calculated. If it has already been solved, then the function retrieves the inverse matrix value from the cached "matrix" and returns this. Otherwise, it now calculates the invserse of the matrix and then sets the value of "matrix" in the cache using the "setmatrix" function.
+#The cacheSolve function calculates the inverse of the matrix object (x) created with the previous function. 
+#The cacheSolve function first checks whether the inverse matrix has already been calculated. 
+#If it has already been solved, then the function retrieves the inverse matrix value from the cached "matrix" and returns this. #Otherwise, it now calculates the invserse of the matrix and then sets the value of "matrix" in the cache using the "setmatrix" function.
 
 
 cacheSolve <- function(x, ...) {
