@@ -6,7 +6,8 @@
 
 
      
-#About the makeCacheMatrix function:  This function creates a special matrix object (matrix) to store the inverse matrix it calculates  It also creates an object (x) to store the original matrix that is inputted into the function.  
+###About the makeCacheMatrix function:  This function creates a special matrix object (matrix) to store the inverse matrix it calculates  
+#It also creates an object (x) to store the original matrix that is inputted into the function.  
 #Both of these objecs are cached outside of the function's environment with the "set" function.  
 #The "get" function returns the value of the matrix, when called by the next function, cacheSolve.  
 #The "setmatrix" and "getmatrix" functions cache and retreive the cached value of inverse matrix, respectivly.
